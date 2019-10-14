@@ -5,7 +5,7 @@
       .user-name
         .p lomo@test
       .icon-head
-        =link_to "", class: "icon-head__editedit" do
+        =link_to new_group_path, class: "icon-head__editedit" do
           = fa_icon'edit'
         =link_to "", class: "icon-head__cogcog" do
           = fa_icon'cog'
@@ -27,6 +27,7 @@
             .p lomo@test
       .edit-btn
         .p Edit
+        
     .group-chat
       .name-date
         .group-chat-name LOMO

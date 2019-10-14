@@ -1,0 +1,40 @@
+.body
+  = render 'groups/shared/side_bar'
+  .right-box
+    .group-room
+      .left-headbox
+        .left-headname
+          = @group.name
+        .member-box
+          .left-member
+            .p Member:
+          .in-member
+            = current_user.name
+      .edit-btn
+        = link_to edit_group_path(@group) do
+          .p Edit
+          -# %a Edit
+    .group-chat
+      = render partial: 'message', collection: @messages, as: :message
+    .comment-bottom
+      .chat-base
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'chat-box', placeholder: 'type a message'
+          .img-btn-box
+            = f.label :image, class: 'img' do
+              = fa_icon 'picture-o', class: 'image'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'chat-send'
+
+
+    -# .comment-bottom
+    -#   = form_for [@group, @message] do |f|
+    -#     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    -#     .form__mask
+    -#       = f.label :image, class: 'form__mask__image' do
+    -#         = fa_icon 'picture-o', class: 'icon'
+    -#         = f.file_field :image, class: 'hidden'
+    -#     = f.submit 'Send', class: 'form__submit'
+-# 未編集版
+
+
