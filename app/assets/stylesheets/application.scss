@@ -7,15 +7,18 @@
 }
 
 @import "reset";
-@import "index";
+// @import "index";
 @import "font-awesome";
 @import "modules/user"; 
-@import "config/colors";
+// @import "config/colors";
 @import "modules/flash";
 @import "modules/group";
-// @import "modules/chat";
 @import "modules/side_bar";
-
+@import "mixins/vendor_prefix";
+@import "index";
+// @import "modules/chat";
+// @import "messages/messages.scss"
+// scssの場合、；なしでいいのか？☝︎
 
 
 
