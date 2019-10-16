@@ -10,16 +10,16 @@
             .p Member:
           .in-member
             = current_user.name
-      .edit-btn
-        = link_to edit_group_path(@group) do
-          .p Edit
-          -# %a Edit
+      = link_to 'Edit', edit_group_path(@group.id), class:"edit-btn"
+      -# .p Edit
+      -# -# %a Edit
     .group-chat
       = render partial: 'message', collection: @messages, as: :message
     .comment-bottom
       .chat-base
         = form_for [@group, @message] do |f|
-          = f.text_field :content, class: 'chat-box', placeholder: 'type a message'
+          -# = f.text_field :content, class: 'chat-box', placeholder: ' type a message'
+          = f.text_field :content, class: 'chat-box', placeholder: ' type a message'
           .img-btn-box
             = f.label :image, class: 'img' do
               = fa_icon 'picture-o', class: 'image'
