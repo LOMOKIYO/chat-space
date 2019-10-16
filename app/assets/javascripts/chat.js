@@ -1,6 +1,6 @@
 $(function(){
   function buildPost(message){
-    var content =  message.content ? `${ message.content }` : "";
+    var content =  message.text ? `${ message.text }` : "";
     var img = message.image ? `<img src= ${ message.image }>` : "";
       var html = `<div class="message" data-message-id=${message.id}>
                     <div class="upper-message">
