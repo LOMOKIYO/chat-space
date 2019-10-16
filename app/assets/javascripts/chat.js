@@ -44,7 +44,6 @@ $(function(){
     }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
-    // console.log("OK");
     var formData = new FormData(this);
     var url = $(this).attr('action');
     $.ajax({
@@ -56,9 +55,7 @@ $(function(){
       contentType: false
     })
     .done(function(message){
-      // console.log(message.text);
       var html = buildPost(message);
-      //debugger
       $('.group-chat').append(html)
       $('.group-chat').animate({scrollTop: $('.group-chat')[0].scrollHeight}, 'fast');   
       $('form')[0].reset();
