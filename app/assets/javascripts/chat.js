@@ -13,13 +13,13 @@ $(function(){
                     </div>
                     <div class="lower-message" >
                       <div class="lower-message__content">
-                        ${message.text}
+                        ${content}
                       </div>
                     </div>
                 
                   </div>
                   <div class="lower-message">
-                    <img class="lower-message__image" src="${message.image}" >
+                    <img class="lower-message__image" src="${img}" >
                   </div>
                   </div>`
                 return html;
@@ -49,4 +49,4 @@ $(function(){
     });
     return false;
   })
-});
+};
