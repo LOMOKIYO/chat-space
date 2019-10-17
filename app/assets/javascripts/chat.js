@@ -16,16 +16,13 @@ $(function(){
                         ${content}
                       </div>
                     </div>
-                
                   </div>
                   <div class="lower-message">
-                    <img class="lower-message__image" src="${img}" >
+                    ${img}
                   </div>
                   </div>`
                 return html;
-              });
-
- 
+  };
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -49,4 +46,4 @@ $(function(){
     });
     return false;
   })
-};
+});
