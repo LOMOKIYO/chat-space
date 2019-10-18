@@ -5,7 +5,7 @@
   .header {
     background-color:  #253141;
     height: 100px;
-    line-height: 100px;
+    line-height: 99px;
     padding: 0 20px;
     &__name {
       display: inline-block;
@@ -27,10 +27,12 @@
 
   .groups {
     background-color:  #2f3e51;
-    height: calc(100vh - 100px);
+    height: calc(100% - 100px);
+    width: 300px;
     padding: 0 20px;
     color: white;
     text-decoration: none;
+    overflow: scroll;
     
     .group {
       box-sizing: border-box;
